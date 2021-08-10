@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea2bfaf-2c79-42cf-8c7c-cbcc1f449781" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest2_CountWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/sink/SinkTest4_Jdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/sink/SinkTest4_Jdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +253,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Application.TransformTest6_Rartition">
     <configuration name="TransformTest2_RollingAggregation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -338,13 +332,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -404,6 +400,7 @@
       <workItem from="1628516668812" duration="542000" />
       <workItem from="1628517401430" duration="194000" />
       <workItem from="1628517626699" duration="3110000" />
+      <workItem from="1628602141353" duration="4025000" />
     </task>
     <servers />
   </component>
