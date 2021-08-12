@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea2bfaf-2c79-42cf-8c7c-cbcc1f449781" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest2_CountWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest3_EventTimeWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" afterDir="false" />
     </list>
@@ -332,15 +332,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -401,6 +399,10 @@
       <workItem from="1628517401430" duration="194000" />
       <workItem from="1628517626699" duration="3110000" />
       <workItem from="1628602141353" duration="4025000" />
+      <workItem from="1628774735455" duration="588000" />
+      <workItem from="1628775342685" duration="213000" />
+      <workItem from="1628775611329" duration="3000" />
+      <workItem from="1628775969318" duration="3419000" />
     </task>
     <servers />
   </component>

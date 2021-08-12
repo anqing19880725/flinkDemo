@@ -13,13 +13,16 @@ import org.apache.flink.streaming.api.functions.windowing.ProcessWindowFunction;
 import org.apache.flink.streaming.api.functions.windowing.WindowFunction;
 import org.apache.flink.streaming.api.windowing.assigners.EventTimeSessionWindows;
 import org.apache.flink.streaming.api.windowing.assigners.TumblingProcessingTimeWindows;
+import org.apache.flink.streaming.api.windowing.evictors.Evictor;
 import org.apache.flink.streaming.api.windowing.time.Time;
+import org.apache.flink.streaming.api.windowing.triggers.Trigger;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
 import org.apache.flink.util.Collector;
+import org.apache.flink.util.OutputTag;
 
 public class WindowTest1_TimeWindow {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
@@ -67,25 +70,38 @@ public class WindowTest1_TimeWindow {
 
 
         // 2.全窗口函数
-        SingleOutputStreamOperator<Tuple3<String,Long,Integer>> resultStream2 = dataStream.keyBy("id")
+        SingleOutputStreamOperator<Tuple3<String, Long, Integer>> resultStream2 = dataStream.keyBy("id")
                 .timeWindow(Time.seconds(15))
 //                .process(new ProcessWindowFunction<SensorReading, Object, Tuple, TimeWindow>() {
 //                })
-                .apply(new WindowFunction<SensorReading, Tuple3<String,Long,Integer>, Tuple, TimeWindow>() {
+                .apply(new WindowFunction<SensorReading, Tuple3<String, Long, Integer>, Tuple, TimeWindow>() {
                     @Override
-                    public void apply(Tuple tuple, TimeWindow window, Iterable<SensorReading> input, Collector<Tuple3<String,Long,Integer>> out) throws Exception {
+                    public void apply(Tuple tuple, TimeWindow window, Iterable<SensorReading> input, Collector<Tuple3<String, Long, Integer>> out) throws Exception {
                         String id = tuple.getField(0);
                         Long windowEnd = window.getEnd();
                         Integer count = IteratorUtils.toList(input.iterator()).size();
-                        out.collect(new Tuple3<>(id,windowEnd,count));
+                        out.collect(new Tuple3<>(id, windowEnd, count));
                     }
                 });
+
+
+        // 3.其他可选API
+        OutputTag<SensorReading> outputTag = new OutputTag<SensorReading>("late") {
+        };
+
+        SingleOutputStreamOperator<SensorReading> sumStream = dataStream.keyBy("id")
+                .timeWindow(Time.seconds(15))
+//              .trigger(new Trigger<SensorReading, TimeWindow>() {})
+//              .evictor(new Evictor<SensorReading, TimeWindow>() {})
+                .allowedLateness(Time.minutes(1))
+                .sideOutputLateData(outputTag)
+                .sum("temperature");
+
+        sumStream.getSideOutput(outputTag).print("late");
 
 //        resultStream.print();
         resultStream2.print();
         env.execute();
-
-
 
     }
 }
