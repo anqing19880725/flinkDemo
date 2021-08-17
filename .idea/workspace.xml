@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea2bfaf-2c79-42cf-8c7c-cbcc1f449781" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest3_EventTimeWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest1_TimeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest3_EventTimeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/window/WindowTest3_EventTimeWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,6 +402,11 @@
       <workItem from="1628775342685" duration="213000" />
       <workItem from="1628775611329" duration="3000" />
       <workItem from="1628775969318" duration="3419000" />
+      <workItem from="1628948186205" duration="4603000" />
+      <workItem from="1629033871101" duration="2187000" />
+      <workItem from="1629122068931" duration="1311000" />
+      <workItem from="1629207532799" duration="32000" />
+      <workItem from="1629214902799" duration="34000" />
     </task>
     <servers />
   </component>
