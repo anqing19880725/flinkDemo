@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea2bfaf-2c79-42cf-8c7c-cbcc1f449781" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/state/StateTest4_FaultTolerance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/atguigu/apitest/processfunction/ProcessTest1_KeyedProcessFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,6 +384,7 @@
       <workItem from="1629214902799" duration="34000" />
       <workItem from="1630303871569" duration="7661000" />
       <workItem from="1630331751021" duration="2673000" />
+      <workItem from="1630418018665" duration="2540000" />
     </task>
     <servers />
   </component>
