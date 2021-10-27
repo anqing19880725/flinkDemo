@@ -49,7 +49,7 @@ public class SinkTest2_Redis {
 
         @Override
         public String getValueFromData(SensorReading data) {
-            return data.getTemprature().toString();
+            return data.getTemperature().toString();
         }
     }
 }

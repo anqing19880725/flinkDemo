@@ -39,12 +39,12 @@ public class TransformTest3_Reduce {
         SingleOutputStreamOperator<SensorReading> resultStream = keyedStream.reduce(new ReduceFunction<SensorReading>() {
             @Override
             public SensorReading reduce(SensorReading value1, SensorReading value2) throws Exception {
-                return new SensorReading(value1.getId(), value2.getTimestamp(), Math.max(value1.getTemprature(), value2.getTemprature()));
+                return new SensorReading(value1.getId(), value2.getTimestamp(), Math.max(value1.getTemperature(), value2.getTemperature()));
             }
         });
 
         keyedStream.reduce((curState,newData) -> {
-            return  new SensorReading(curState.getId(),newData.getTimestamp(),Math.max(curState.getTemprature(),newData.getTemprature()));
+            return  new SensorReading(curState.getId(),newData.getTimestamp(),Math.max(curState.getTemperature(),newData.getTemperature()));
         });
 
         resultStream.print();

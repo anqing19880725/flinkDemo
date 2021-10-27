@@ -32,7 +32,7 @@ public class TransformTest4_MultipleStreams {
             @Override
             public Iterable<String> select(SensorReading value) {
 
-                return (value.getTemprature() > 30 ? Collections.singletonList("high") : Collections.singletonList("low"));
+                return (value.getTemperature() > 30 ? Collections.singletonList("high") : Collections.singletonList("low"));
             }
         });
 
@@ -48,7 +48,7 @@ public class TransformTest4_MultipleStreams {
         DataStream<Tuple2<String, Double>> warningStream = highTempStream.map(new MapFunction<SensorReading, Tuple2<String, Double>>() {
             @Override
             public Tuple2<String, Double> map(SensorReading value) throws Exception {
-                return new Tuple2<>(value.getId(), value.getTemprature());
+                return new Tuple2<>(value.getId(), value.getTemperature());
             }
         });
 

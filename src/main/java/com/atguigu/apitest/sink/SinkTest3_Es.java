@@ -45,7 +45,7 @@ public class SinkTest3_Es {
             // 定义写入的数据source
             HashMap<String, String> dataSource = new HashMap<>();
             dataSource.put("id", element.getId());
-            dataSource.put("temp", element.getTemprature().toString());
+            dataSource.put("temp", element.getTemperature().toString());
             dataSource.put("ts", element.getTimestamp().toString());
 
             // 创建请求,作为向ES发起的命令

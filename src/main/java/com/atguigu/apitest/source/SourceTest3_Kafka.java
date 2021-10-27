@@ -15,7 +15,6 @@ public class SourceTest3_Kafka {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         env.setParallelism(1);
 
-
         Properties properties = new Properties();
         properties.setProperty("bootstrap.servers","localhost:9092");
         properties.setProperty("group.id","consumer-group");

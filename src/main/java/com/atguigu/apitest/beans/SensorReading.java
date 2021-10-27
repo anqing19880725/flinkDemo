@@ -6,16 +6,7 @@ public class SensorReading {
     // 属性:id,时间戳,温度值
     private String id;
     private Long timestamp;
-    private Double temprature;
-
-    public SensorReading() {
-    }
-
-    public SensorReading(String id, Long timestamp, Double temprature) {
-        this.id = id;
-        this.timestamp = timestamp;
-        this.temprature = temprature;
-    }
+    private Double temperature;
 
     public String getId() {
         return id;
@@ -33,12 +24,21 @@ public class SensorReading {
         this.timestamp = timestamp;
     }
 
-    public Double getTemprature() {
-        return temprature;
+    public Double getTemperature() {
+        return temperature;
     }
 
-    public void setTemprature(Double temprature) {
-        this.temprature = temprature;
+    public void setTemperature(Double temperature) {
+        this.temperature = temperature;
+    }
+
+    public SensorReading() {
+    }
+
+    public SensorReading(String id, Long timestamp, Double temperature) {
+        this.id = id;
+        this.timestamp = timestamp;
+        this.temperature = temperature;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class SensorReading {
         return "SensorReading{" +
                 "id='" + id + '\'' +
                 ", timestamp=" + timestamp +
-                ", temprature=" + temprature +
+                ", temperature=" + temperature +
                 '}';
     }
 }

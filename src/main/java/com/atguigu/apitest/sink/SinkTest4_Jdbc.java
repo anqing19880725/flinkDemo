@@ -48,17 +48,15 @@ public class SinkTest4_Jdbc {
         }
 
         // 每来一条数据,调用连接,执行sql
-
-
         @Override
         public void invoke(SensorReading value, Context context) throws Exception {
             // 直接执行更新语句,如果没有更新那么就插入
-            updateStmt.setDouble(1, value.getTemprature());
+            updateStmt.setDouble(1, value.getTemperature());
             updateStmt.setString(2, value.getId());
             updateStmt.execute();
             if (updateStmt.getUpdateCount() == 0) {
                 insertStmt.setString(1, value.getId());
-                insertStmt.setDouble(2, value.getTemprature());
+                insertStmt.setDouble(2, value.getTemperature());
                 insertStmt.execute();
             }
         }

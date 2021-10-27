@@ -61,19 +61,19 @@ public class ProcessTest2_ApplicationCase {
             Long timeTs = timerTsState.value();
 
             // 如果温度上升就要注册10秒后的定时器,开始等待
-            if (value.getTemprature() > lastTemp && timeTs == null) {
+            if (value.getTemperature() > lastTemp && timeTs == null) {
                 // 计算出定时器时间戳
                 long ts = ctx.timerService().currentProcessingTime() + interval * 1000L;
                 ctx.timerService().registerProcessingTimeTimer(ts);
                 timerTsState.update(ts);
             }
             // 如果温度下降 删除定时器
-            else if (value.getTemprature() < lastTemp && timeTs != null) {
+            else if (value.getTemperature() < lastTemp && timeTs != null) {
                 ctx.timerService().deleteProcessingTimeTimer(timeTs);
                 timerTsState.clear();
             }
             // 更新温度状态
-            lastTempState.update(value.getTemprature());
+            lastTempState.update(value.getTemperature());
         }
 
         @Override

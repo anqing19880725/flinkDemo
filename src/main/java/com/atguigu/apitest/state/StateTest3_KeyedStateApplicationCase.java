@@ -57,13 +57,13 @@ public class StateTest3_KeyedStateApplicationCase {
 
             // 如果状态不为null,那么就判断两次温度差值
             if (lastTemp != null) {
-                Double diff = Math.abs(value.getTemprature() - lastTemp);
+                Double diff = Math.abs(value.getTemperature() - lastTemp);
                 if ((diff >= threshold)) {
-                    out.collect(new Tuple3<>(value.getId(), lastTemp, value.getTemprature()));
+                    out.collect(new Tuple3<>(value.getId(), lastTemp, value.getTemperature()));
                 }
             }
             // 更新状态
-            lastTempState.update(value.getTemprature());
+            lastTempState.update(value.getTemperature());
         }
 
         @Override

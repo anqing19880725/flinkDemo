@@ -47,7 +47,7 @@ public class WindowTest2_CountWindow {
 
         @Override
         public Tuple2<Double, Integer> add(SensorReading value, Tuple2<Double, Integer> accumulator) {
-            return new Tuple2<>(accumulator.f0 + value.getTemprature(), accumulator.f1 + 1);
+            return new Tuple2<>(accumulator.f0 + value.getTemperature(), accumulator.f1 + 1);
         }
 
         @Override

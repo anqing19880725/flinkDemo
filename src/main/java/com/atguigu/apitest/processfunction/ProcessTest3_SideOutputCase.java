@@ -9,7 +9,6 @@ import org.apache.flink.util.Collector;
 import org.apache.flink.util.OutputTag;
 
 public class ProcessTest3_SideOutputCase {
-
     public static void main(String[] args) throws Exception {
 
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -35,7 +34,7 @@ public class ProcessTest3_SideOutputCase {
             @Override
             public void processElement(SensorReading value, Context ctx, Collector<SensorReading> out) throws Exception {
                 // 判断温度,大于30度是高温流,输出到主流;小于30度就是低温流,输出到侧输出
-                if (value.getTemprature() > 30) {
+                if (value.getTemperature() > 30) {
                     out.collect(value);
                 } else {
                     ctx.output(lowTempTag, value);
