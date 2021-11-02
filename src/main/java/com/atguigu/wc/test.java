@@ -4,7 +4,7 @@ public class test {
     public static void main(String[] args) {
 
 
-        String[] countryArray = {"aa"};
+        String[] countryArray = {"aa","bb","cc","dd","ee"};
         System.out.println(countryArray[0]);
         System.out.println(countryArray[1]);
         System.out.println(countryArray[2]);

@@ -9,7 +9,7 @@ import org.apache.flink.table.api.Table;
 import org.apache.flink.table.api.java.StreamTableEnvironment;
 import org.apache.flink.types.Row;
 
-public class Example {
+public class TableTest1_Example {
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -43,8 +43,6 @@ public class Example {
         tableEnv.toAppendStream(resultSqlTable, Row.class).print("Sql");
 
         env.execute();
-
-
     }
 
 }
