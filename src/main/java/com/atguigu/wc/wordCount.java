@@ -15,7 +15,7 @@ public class wordCount {
         // 创建执行环境
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         // 从文件中读取数据
-        String inputPath = "D:\\idea_workspace\\FlinkTutorial\\src\\main\\resources\\hello.txt";
+        String inputPath = "D:\\idea_workspace\\flinkDemo\\src\\main\\resources\\hello.txt";
         DataSet<String> inputDataSet = env.readTextFile(inputPath);
 
         // 对数据集进行处理,按空格分词展开,转化成word,1元组进行统计

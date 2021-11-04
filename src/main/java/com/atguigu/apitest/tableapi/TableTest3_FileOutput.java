@@ -59,8 +59,8 @@ public class TableTest3_FileOutput {
                         .field("temperature", DataTypes.DOUBLE()))
                 .createTemporaryTable("outputTable");
 
-//        resultTable.insertInto("outputTable");
-        aggTable.insertInto("outputTable");
+        resultTable.insertInto("outputTable");
+//        aggTable.insertInto("outputTable");// 报错 更新行为是先删后插 文件不支持先删后插
 
         env.execute();
     }
